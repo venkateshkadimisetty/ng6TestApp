@@ -6,15 +6,30 @@
       <form #loginForm="ngForm" class="example-form" (ngSubmit)="login(loginForm)">
         <table class="example-full-width" cellspacing="0">
           <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+                <mat-error >
+                    Username is Required!
+                </mat-error>
+                </mat-form-field>
+              </td>
+            </tr>
+          <!--<tr>
             <td>
-              <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
-              </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Enter your password" [(ngModel)]="password" required [type]="hide ? 'password' : 'text'">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                  </mat-form-field>
             </td>
-          </tr>
+          </tr>-->
           <tr>
-          <td><mat-form-field class="example-full-width">
+          <td>
+            <mat-form-field class="example-full-width">
             <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+            <mat-error >
+                Password is Required!
+            </mat-error>
           </mat-form-field></td>
         </tr>
         <tr>
