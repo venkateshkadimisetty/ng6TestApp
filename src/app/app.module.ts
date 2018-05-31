@@ -8,7 +8,11 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { SignInService } from './sign-in/sign-in.service'; 
+import { JwtModule } from '@auth0/angular-jwt';
 
+export function tokenGetter() {
+  return localStorage.getItem('access-token');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,14 @@ import { SignInService } from './sign-in/sign-in.service';
     MaterialModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:3001'],
+        blacklistedRoutes: ['localhost:3001/auth/']
+      }
+    })
   ],
   providers: [SignInService],
   bootstrap: [AppComponent]
