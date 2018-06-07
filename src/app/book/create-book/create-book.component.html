@@ -1,3 +1,40 @@
-<p>
-  create-book works!
-</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>Create Book</h2></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form  class="example-form" >
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" name="username" required>
+              <mat-error >
+                  Username is Required!
+              </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" name="password" required>
+          <mat-error >
+              Password is Required!
+          </mat-error>
+        </mat-form-field></td>
+      </tr>
+      <tr>
+          <td style="text-align:left"><a href="#">Forgot Password?</a>
+            </td></tr>
+    <tr>
+      <td><button mat-raised-button type="submit" color="primary" >Login</button>
+        </td></tr>
+      </table>
+    </form>
+    <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
+  </mat-card-content>
+  <mat-card-actions>
+    
+  </mat-card-actions>
+</mat-card>

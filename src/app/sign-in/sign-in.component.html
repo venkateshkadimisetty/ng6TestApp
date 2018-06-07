@@ -8,39 +8,32 @@
           <tr>
               <td>
                 <mat-form-field class="example-full-width">
-                <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+                <input matInput placeholder="Username" [(ngModel)]="model.username" name="username" required>
                 <mat-error >
                     Username is Required!
                 </mat-error>
                 </mat-form-field>
               </td>
             </tr>
-          <!--<tr>
-            <td>
-                <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Enter your password" [(ngModel)]="password" required [type]="hide ? 'password' : 'text'">
-                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                  </mat-form-field>
-            </td>
-          </tr>-->
           <tr>
           <td>
             <mat-form-field class="example-full-width">
-            <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+            <input matInput placeholder="Password" [(ngModel)]="model.password"type="password" name="password" required>
             <mat-error >
                 Password is Required!
             </mat-error>
           </mat-form-field></td>
         </tr>
         <tr>
-            <td style="text-align:left"><a href="#">Forgot Password?</a>
+            <td style="text-align:left"><a href="#">{{'SIGNIN.FORGOTPASSWORD' | translate}}</a>
               </td></tr>
+              <tr><h2>{{ 'SIGNIN.TITLE' | translate }}</h2></tr>
       <tr>
-        <td><button mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">Login</button>
+        <td><button mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">{{'SIGNIN.SIGNIN' | translate}}</button>
           </td></tr>
         </table>
       </form>
-      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
     </mat-card-content>
     <mat-card-actions>
       
