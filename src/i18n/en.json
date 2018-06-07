@@ -1,0 +1,8 @@
+{
+    "SIGNIN": {
+      "TITLE": "Login",
+      "USERNAME":"Username",
+      "PASSWORD": "Password",
+      "SIGNIN":"LOGIN"
+    }
+  }

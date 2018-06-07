@@ -2,13 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { User }    from './model/user';
 import {SignInService} from './sign-in.service';
+import {TranslateService} from 'ng2-translate';
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-  constructor(private router: Router, private signInservice:SignInService) { }
+  constructor(private router: Router, private signInservice:SignInService,private translate: TranslateService) { 
+    translate.addLangs(["en", "fr","tl"]);
+    translate.setDefaultLang('tl');
+
+    //let browserLang = translate.getBrowserLang();
+    //translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  }
   
   model = new User('','');
   ngOnInit() {
