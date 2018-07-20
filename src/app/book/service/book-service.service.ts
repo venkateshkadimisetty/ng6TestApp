@@ -8,6 +8,6 @@ export class BookServiceService {
 
   constructor(private  httpClient:  HttpClient) { }
   getAllBooks(){
-    return  this.httpClient.get(`https://lbmanager-node.herokuapp.com/user/login`);
+    return  this.httpClient.get(`https://lbmanager-node.herokuapp.com/api/book/listAllBooks`);
   }
 }
