@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [
-  {path: '',
-    children: [{ path: '', redirectTo: 'create-student', pathMatch: 'full' },
-    {
-      path: 'create-student',
-      component: CreateStudentComponent
-    }]
+  {
+    path: '',
+    children: [
+      { path: '', redirectTo: 'create-student', pathMatch: 'full' },
+      {
+        path: 'create-student',
+        component: CreateStudentComponent
+      }
+    ]
   }
 ];
 
@@ -16,4 +19,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class StudentRoutingModule { }
+export class StudentRoutingModule {}

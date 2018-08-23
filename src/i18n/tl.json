@@ -1,9 +1,9 @@
 {
-    "SIGNIN": {
-      "TITLE": "సైన్ ఇన్",
-      "USERNAME":"యూజర్ పేరు",
-      "PASSWORD": "పాస్వర్డ్",
-      "SIGNIN":"ధయ చెయండి",
-      "FORGOTPASSWORD":"మల్లి మర్చిపొయను"
-    }
+  "SIGNIN": {
+    "TITLE": "సైన్ ఇన్",
+    "USERNAME": "యూజర్ పేరు",
+    "PASSWORD": "పాస్వర్డ్",
+    "SIGNIN": "ధయ చెయండి",
+    "FORGOTPASSWORD": "మల్లి మర్చిపొయను"
   }
+}

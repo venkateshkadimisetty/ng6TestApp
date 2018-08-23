@@ -5,10 +5,7 @@ import { StudentRoutingModule } from './student-routing.module';
 import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    StudentRoutingModule
-  ],
+  imports: [CommonModule, StudentRoutingModule],
   declarations: [CreateStudentComponent]
 })
-export class StudentModule { }
+export class StudentModule {}

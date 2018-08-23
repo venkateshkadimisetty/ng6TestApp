@@ -6,11 +6,7 @@ import { CreateBookComponent } from './create-book/create-book.component';
 import { AllbooksComponent } from './allbooks/allbooks.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BookRoutingModule,
-    MaterialModule
-  ],
+  imports: [CommonModule, BookRoutingModule, MaterialModule],
   declarations: [CreateBookComponent, AllbooksComponent]
 })
-export class BookModule { }
+export class BookModule {}

@@ -6,14 +6,11 @@ import { BookServiceService } from '../service/book-service.service';
   styleUrls: ['./allbooks.component.css']
 })
 export class AllbooksComponent implements OnInit {
-
-  constructor(private bookService:BookServiceService) { }
+  constructor(private bookService: BookServiceService) {}
 
   ngOnInit() {
-    this.bookService.getAllBooks().subscribe((response) =>  {
+    this.bookService.getAllBooks().subscribe(response => {
       console.log(response);
-    }
-  )
+    });
   }
-
 }
